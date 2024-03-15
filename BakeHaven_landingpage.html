@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* Global styles */
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        body {
+            background-image: url("bg.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 0.3em 1.3rem;
+            font-size: 17px;
+            font-weight: bold;
+            color: #494234;
+            position: relative;
+            z-index: 11;
+        }
+
+        nav ul li a::after {
+            content: "";
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+            background-color: #f7f5dd;
+            z-index: -1;
+            transition: width 0.5s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .main-content {
+            width: 40%;
+            text-align: center; 
+            margin-top: 8.8rem; 
+            text-size-adjust: 50%;
+        }
+
+        .main-text {
+            flex-basis: 50%;
+            border-radius: 10px;
+            text-align: center; 
+        }
+
+        .main-content h1 {
+            font-size: 60px;
+            letter-spacing: 1px;
+            color: #494234;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            margin-top: 10px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #494234;
+        }
+
+        .main-content .button-container {
+            margin-top: 20px;
+        }
+
+        .main-content .button-container button {
+            outline: none;
+            border: none;
+            font-size: 18px;
+            padding: 0.5rem 2.5rem 0.5rem 1rem;
+            border-radius: 0 50% 50% 0;
+            color: #f7f5dd;
+            cursor: pointer;
+            background-color: #494234;
+            transition: background-color 0.3s;
+        }
+
+        .main-content .button-container button:hover {
+            background-color: #f7f5dd;
+            color: #494234;
+        }
+
+        .right{
+            position: absolute;
+            right:8%;
+            bottom:20%;
+        }
+        .box
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        .right .box .image img{
+            width: 70%;
+        }
+
+        .image{
+            margin-top: 2rem;
+            width: 80px;
+            height:80px;
+            border-radius: 50%;
+            box-shadow: -5px 5px 17px rgba(0,0,0,0.3);
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            transition:0.5s;
+         }
+
+        .box .inner-box{
+            margin: 1.5rem 0 0 1rem;
+            opacity: 1;
+            transition: opacity 0.3s, transform 0.5s;
+            transform: scale(0.8); 
+         }
+
+         .box:hover .inner-box {
+            opacity: 1;
+            transform: scale(1);
+         }
+
+         .box .inner-box p{
+            font-size:14px;
+            font-weight: 500;
+            opacity: 1; 
+         }
+
+         .social-links{
+            position:absolute;
+            right:5%;
+            bottom:5%;
+         }
+
+         .social-links::before{
+            content: "";
+            width: 80%;
+            height:3px;
+            position: absolute;
+            top:42%;
+            left:-150px;
+            background-color:#f7f5dd;
+            transition: 0.5s;
+         }
+
+         .social-links i{
+            margin-left:10px;
+            width:35px;
+            height:35px;
+            border-radius: 50%;
+            background-color: #494234;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+         }
+
+         .social-links i:hover{
+            transform: translate(-5px);
+            background-color: #f7f5dd;
+         }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <img src="logo_bh.png" width="13%">
+    </nav>
+    <div class="main-content">
+        <div class="main-text">
+            <h1>BakeHaven</h1>
+            <p>Where Every Bite Blossoms with Flourish and Frost!</p>
+            <div class="button-container">
+                <button>Order Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="box">
+            <div class="image">
+            <img src="fresh.png">
+        </div>
+        <div class="inner-box">
+            <h3>Freshness</h3>
+            <p>Fresh Flavors, Every Bite!</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image">
+        <img src="variety.png">
+    </div>
+    <div class="inner-box">
+        <h3>Variety</h3>
+        <p>Diverse Delights Await!</p>
+    </div>
+</div>
+<div class="box">
+    <div class="image">
+    <img src="affo.png" width="25%">
+</div>
+<div class="inner-box">
+    <h3>Affordable</h3>
+    <p>Affordable Sweetness, Always.</p>
+</div>
+</div>
+</div>
+<div class="social-links">
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-whatsapp"></i>
+</div>
+</body>
+</html>
